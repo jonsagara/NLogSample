@@ -1,0 +1,24 @@
+IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'Log') BEGIN
+    PRINT '[dbo].[Log] already exists.'
+	RETURN
+END
+
+CREATE TABLE [dbo].[Log](
+	  [Id] BIGINT IDENTITY(1, 1) PRIMARY KEY
+	, [DateUtc] DATETIME2 NOT NULL
+	, [ThreadId] INT NULL
+	, [Level] NVARCHAR(50) NOT NULL
+	, [MachineName] NVARCHAR(255) NOT NULL
+	, [Logger] NVARCHAR(500) NOT NULL
+	, [UserName] NVARCHAR(50) NULL
+	, [Message] NVARCHAR(4000) NOT NULL
+	, [Exception] NVARCHAR(4000)
+)
+GO
+
+/*
+
+DROP TABLE [dbo].[Log]
+GO
+
+*/

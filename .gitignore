@@ -13,4 +13,5 @@ _ReSharper*/
 src/packages/
 *.orig
 ClientBin/
+.vs/
 

@@ -15,7 +15,7 @@ namespace NLogTest.ConsoleApp
             }
             catch (Exception ex)
             {
-                Logger.Error("An unhandled exception occurred", ex);
+                Logger.Error(ex, "An unhandled exception occurred");
             }
 
             try
@@ -24,7 +24,7 @@ namespace NLogTest.ConsoleApp
             }
             catch (Exception ex)
             {
-                Logger.Error("An unhandled exception occurred", ex);
+                Logger.Error(ex, "An unhandled exception occurred");
             }
 
             Logger.Info("This is just an informational logging string.");
